@@ -11,7 +11,7 @@
 3. git checkout '자신의 branch명' 
 4. 자신의 이니셜에 맞는 폴더에서만 작성
 5. git add '자신의 폴더명'
-6. git commit
+6. git commit -m '커밋'
 7. git  remote add portfolio(origin만 빼고 아무거나) 'git주소'   (개인 잔디심기 + 포트폴리오 주소로 연결해주세요)  
 8. git push origin '자신의 branch명'  (😒 **절대 master 하면 안됩니다.... **)
 9. git push portfolio master 
