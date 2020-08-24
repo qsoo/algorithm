@@ -1,12 +1,12 @@
 # Unnecessary directories
 
-ignore-HSJ/
-ignore-KJS/
-ignore-KOG/
-ignore-KSJ/
-ignore-LJH/
-ignore-LSJ/
-ignore-LYJ/
+HSJ/
+KJS/
+KOG/
+KSJ/
+LJH/
+LSJ/
+LYJ/
 
 
 

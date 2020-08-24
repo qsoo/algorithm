@@ -12,11 +12,12 @@
 4. 자신의 이니셜에 맞는 폴더에서만 작성
 5. git add '자신의 폴더명'
 6. git commit -m '커밋'
-7. git  remote add portfolio(origin만 빼고 아무거나) 'git주소'   (개인 잔디심기 + 포트폴리오 주소로 연결해주세요)  
+7. ~~git  remote add portfolio(origin만 빼고 아무거나) 'git주소'   (개인 잔디심기 + 포트폴리오 주소로 연결해주세요)~~ 
 8. git push origin '자신의 branch명'  (😒 **절대 master 하면 안됩니다.... **)
-9. git push portfolio master 
+9. ~~git push portfolio master~~  
+10.  git  remote add portfolio(origin만 빼고 아무거나) 'git주소'   (개인 잔디심기 + 포트폴리오 주소로 연결해주세요)   ->  git push portfolio '브랜치명' 
 
-
+​      **또는** **각자 개인이 관리하는 TIL 레파지토리에 붙여넣어서 푸쉬해주세요....**  
 
 ### 추가 내용들
 
