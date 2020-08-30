@@ -1,14 +1,15 @@
 def check(sp):
+    # 초기 조건 설정
+    visited[sp] = 1
+
+    if not sp in result:
+        result.append(sp)
 
     # end point 방문했는지 확인
-    while sp != ep:
+    while sp != ep and result:
 
         # start point visit
         visited[sp] = 1
-
-        # 촌수 계산을 위해 route를 넣어줄 리스트 생성
-        if not sp in result:
-            result.append(sp)
 
         # 인접 행렬 중 방문 안 한 노드 찾기
         for i in adjacent_matrice[sp]:
@@ -17,12 +18,20 @@ def check(sp):
                     visited[i] = 1
                     sp = i
                     break
+
+        # 촌수 계산을 위해 route를 넣어줄 리스트 생성
+        if not sp in result:
+            result.append(sp)
         # pop
         else:
             result.pop()
-            check(sp)
+            # 위에서 노드를 찾을 때 sp의 값이 바뀌므로 재귀함수를 호출하면 계속 돌게됨
+            sp = result[-1]
+    if result:
+        return len(result)
 
-    return len(result)
+    else:
+        return -1
 
 N = int(input())    # 전체 사람 수(node)
 sp, ep = map(int, input().split())  # 촌수 계산 대상
