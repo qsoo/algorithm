@@ -4,28 +4,22 @@ import sys
 sys.stdin = open('1859.txt', 'r')
 
 
-def profit(li):
-    global total
-    if len(li) < 2:
-        return
-    idx = li.index(max(li))
-
-    # 1. max까지의 이득
-    total += (li[idx]*idx) - sum(li[:idx])
-
-    # 2. 매매일 자르기
-    li = li[(idx+1) :]
-
-    if len(li) < 2:
-        return
-    profit(li)
-
 for tc in range(1, int(input())+1):
     # 매매일 수
     N = int(input())
     arr = list(map(int, input().split()))
 
+    # 기준점
+    mark = 0
     total = 0
-    profit(arr)
 
-    print('#{} {}'.format(tc,total))
+    # 1. 뒤에서부터 큰 거 나올 때까지 탐색
+    for i in range(N-1, -1, -1):
+        if mark < arr[i]:
+            mark = arr[i]
+
+        # 1-1. 앞보다 뒤가 더 클 때
+        else:
+            total += mark - arr[i]
+
+    print('#{} {}'.format(tc, total))
